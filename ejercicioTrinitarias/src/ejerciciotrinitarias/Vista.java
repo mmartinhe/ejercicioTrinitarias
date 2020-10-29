@@ -15,6 +15,7 @@ public class Vista extends JFrame{
     private JLabel lblTitulo;
     private Panel panelTitulo, panelPrincipal, panelAux, panelAux2, panelAzul, panelVerde, panelRojo, panelNaranja, panelAmarillo;
     private Controlador controlador;
+    private Color[] colores = {Color.BLUE, Color.GREEN, Color.RED, Color.ORANGE, Color.YELLOW};
     public Vista(Controlador controlador){
         this.controlador = controlador;
         configuracionVentana();
@@ -59,27 +60,27 @@ public class Vista extends JFrame{
         panelInferior.setLayout(new GridLayout(0, 5));
         
         panelAzul = new Panel();
-        panelAzul.setBackground(Color.BLUE);
+        panelAzul.setBackground(colores[0]);
         panelAzul.setName("panelAzul");
         panelInferior.add(panelAzul);
         
         panelVerde = new Panel();
-        panelVerde.setBackground(Color.GREEN);
+        panelVerde.setBackground(colores[1]);
         panelVerde.setName("panelVerde");
         panelInferior.add(panelVerde);
         
         panelRojo = new Panel(); 
-        panelRojo.setBackground(Color.RED);
+        panelRojo.setBackground(colores[2]);
         panelRojo.setName("panelRojo");
         panelInferior.add(panelRojo);
         
         panelNaranja = new Panel();
-        panelNaranja.setBackground(Color.ORANGE);
+        panelNaranja.setBackground(colores[3]);
         panelNaranja.setName("panelNaranja");
         panelInferior.add(panelNaranja);
         
         panelAmarillo = new Panel();
-        panelAmarillo.setBackground(Color.YELLOW);
+        panelAmarillo.setBackground(colores[4]);
         panelAmarillo.setName("panelAmarillo");
         panelInferior.add(panelAmarillo);
         
@@ -95,7 +96,7 @@ public class Vista extends JFrame{
         panelAmarillo.addMouseListener(controlador);
     }
 
-    void setColorTitulo(Color color) {
+    public void setColorTitulo(Color color) {
         lblTitulo.setForeground(color);
     }
     
