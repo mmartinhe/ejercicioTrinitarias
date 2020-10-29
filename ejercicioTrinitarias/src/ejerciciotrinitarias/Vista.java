@@ -61,23 +61,29 @@ public class Vista extends JFrame{
         panelAzul = new Panel();
         panelAzul.setBackground(Color.BLUE);
         panelAzul.setName("panelAzul");
+        panelInferior.add(panelAzul);
         
         panelVerde = new Panel();
         panelVerde.setBackground(Color.GREEN);
         panelVerde.setName("panelVerde");
+        panelInferior.add(panelVerde);
         
         panelRojo = new Panel(); 
         panelRojo.setBackground(Color.RED);
         panelRojo.setName("panelRojo");
+        panelInferior.add(panelRojo);
         
         panelNaranja = new Panel();
         panelNaranja.setBackground(Color.ORANGE);
         panelNaranja.setName("panelNaranaja");
+        panelInferior.add(panelNaranja);
         
         panelAmarillo = new Panel();
         panelAmarillo.setBackground(Color.YELLOW);
         panelAmarillo.setName("panelNaranja");
+        panelInferior.add(panelAmarillo);
         
+        this.add(panelInferior);
     }
 
     private void anadirEscuchadores() {
