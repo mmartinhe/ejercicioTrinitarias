@@ -1,6 +1,8 @@
 
 package ejerciciotrinitarias;
 
+import java.awt.Color;
+import java.awt.Panel;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -9,32 +11,47 @@ import java.awt.event.MouseListener;
  */
 public class Controlador implements MouseListener{
     private Vista vista;
+    private Color color;
     public Controlador(){
        vista = new Vista(this);
     }
 
     @Override
     public void mouseClicked(MouseEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Panel panel = (Panel)e.getSource();
+        if(panel.getName().equals("panelAzul")
+                ||panel.getName().equals("panelVerde")
+                ||panel.getName().equals("panelRojo")
+                ||panel.getName().equals("panelNaranja")
+                ||panel.getName().equals("panelAmarillo")){ 
+                
+                color = panel.getBackground();
+                vista.setColorTitulo(color);
+        }
     }
 
     @Override
     public void mousePressed(MouseEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("");
     }
 
     @Override
     public void mouseReleased(MouseEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("");
     }
 
     @Override
     public void mouseEntered(MouseEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        /*
+        Aquí es donde se haría lo de camibar de color al panel principal pero no sé cómo hacerlo
+        */
     }
 
     @Override
     public void mouseExited(MouseEvent e) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        /*
+        Aquí se haría lo de volver a poner el panel Principal al color blanco por defecto al sacar el ratón del panel
+        */
+        
     }
 }

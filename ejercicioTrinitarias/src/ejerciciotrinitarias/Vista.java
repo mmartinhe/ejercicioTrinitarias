@@ -75,12 +75,12 @@ public class Vista extends JFrame{
         
         panelNaranja = new Panel();
         panelNaranja.setBackground(Color.ORANGE);
-        panelNaranja.setName("panelNaranaja");
+        panelNaranja.setName("panelNaranja");
         panelInferior.add(panelNaranja);
         
         panelAmarillo = new Panel();
         panelAmarillo.setBackground(Color.YELLOW);
-        panelAmarillo.setName("panelNaranja");
+        panelAmarillo.setName("panelAmarillo");
         panelInferior.add(panelAmarillo);
         
         this.add(panelInferior);
@@ -93,6 +93,10 @@ public class Vista extends JFrame{
         panelRojo.addMouseListener(controlador);
         panelNaranja.addMouseListener(controlador);
         panelAmarillo.addMouseListener(controlador);
+    }
+
+    void setColorTitulo(Color color) {
+        lblTitulo.setForeground(color);
     }
     
 }
