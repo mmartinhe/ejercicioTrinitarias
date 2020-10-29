@@ -45,6 +45,15 @@ public class Controlador implements MouseListener{
         /*
         Aquí es donde se haría lo de camibar de color al panel principal pero no sé cómo hacerlo
         */
+        
+       String nombre;
+       Panel panel = (Panel) e.getSource();
+       if (!panel.getName().equals("panelPrincipal")){
+           color = panel.getBackground();
+       }
+       if (panel.getName().equals("panelPrincipal")){
+           vista.setColorPanelPrincipal(color);
+       }
     }
 
     @Override
@@ -52,6 +61,7 @@ public class Controlador implements MouseListener{
         /*
         Aquí se haría lo de volver a poner el panel Principal al color blanco por defecto al sacar el ratón del panel
         */
+        vista.setColorPanelPorDefecto();
         
     }
 }

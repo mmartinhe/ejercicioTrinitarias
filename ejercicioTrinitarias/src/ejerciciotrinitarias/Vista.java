@@ -99,5 +99,13 @@ public class Vista extends JFrame{
     public void setColorTitulo(Color color) {
         lblTitulo.setForeground(color);
     }
+
+    public void setColorPanelPrincipal(Color color) {
+        panelPrincipal.setBackground(color);
+    }
+    
+    public void setColorPanelPorDefecto(){
+        panelPrincipal.setBackground(Color.WHITE);
+    }
     
 }
